@@ -456,7 +456,28 @@ header {
     rw.id = id; rw.async = true; rw.type = "text/javascript";
     rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
     s.parentNode.insertBefore(rw, s);
-    }(document, new Date(), "script", "rating-widget.com/"));</script>
+    }(document, new Date(), "script", "rating-widget.com/"));
+
+// Función para simular el progreso de descarga
+function move() {
+    var elem = document.getElementById("myBar");
+    var width = 0;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + '%';
+        }
+    }
+}
+
+// Llamar a la función move al hacer clic en el botón de descarga
+document.getElementById("download-button").addEventListener("click", move);
+    
+    </scrip>
+   
 
 </body>
 </html>
