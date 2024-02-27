@@ -1,243 +1,419 @@
 <!DOCTYPE html>
-<head><title>developer</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>developer</title>
+    <style>
+        * { padding: 0; margin: 0px; }
+        body { width: 100%; height: 100%; background: #ffffff; }
+        /* Estilos para la barra de progreso */
+        #progress-container { width: 90%; margin: 0 auto; height: 20px; background-color: #f0f0f0; border-radius: 10px; }
+        #progress-bar { height: 100%; background-color: #4CAF50; border-radius: 10px; transition: width 0.3s ease-in-out; }
 
-<style>
-*{padding: 0;
-margin: 0px;
-
+    * {
+    padding: 0;
+    margin: 0px;
 }
 
-body{width:100%; height: 100%; background: #ffffff;}
-  
- .section01{margin: 2px;  height: 150px; width:80%; }
-.section01 img{ height: 12px; float: right;} 
-  
-.container{ text-align: center; margin: 2px;
-height: 120px; width:100%;}
+body {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
 
-#section1{ text-align: center; margin: 15px;
-width:100px; height: 100px; float: right; }
-#section1 img{  border:  1px solid black;  border-radius: 10px;  text-align: center;}
+.section01 {
+    margin: 2px;
+    height: 150px;
+    width: 80%;
+}
 
-  
-#section2{margin: 10px;
-width:59%; height: 98px;}
+.section01 img {
+    height: 12px;
+    float: right;
+}
 
-#section3 {border: 1px solid black;
-width:59%; height: 40px; display: flex;  }
+.container {
+    text-align: center;
+    margin: 2px;
+    height: 120px;
+    width: 100%;
+}
 
-.nav{width:100%; height: 30px; text-align: center;}
+#section1 {
+    text-align: center;
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+    float: right;
+}
 
-.nav a{display: block; text-decoration: none;
-    font-size: 16px; /* Tamaño de letra */
-    text-transform: uppercase; /* Letras en mayúscula */
-    background: #6B3618; /* Color de fondo */
-    padding: 10px 15px; /* Relleno */
+#section1 img {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#section2 {
     margin: 10px;
-    color: #FFD059; /* Color de texto */
-    border-bottom: solid 2px #FFD059; /* Borde inferior */
-    border-radius: 10px; color: #ffffff;  }
+    width: 59%;
+    height: 98px;
+}
 
-  #section03{
-width:100%; height: 49px; display: flex;}
-#section08{ width:10%;}
-  
-#section04{ width:50%; height: 49px; padding: 2px; 49px; float: right; margin: 5px; text-align: center;}
+#section3 {
+    border: 1px solid black;
+    width: 59%;
+    height: 40px;
+    display: flex;
+}
 
-#section05{width:50%; height: 49px; float: right; margin: 10px; text-align: center;}
-#section05 a{display: block; text-decoration: none;
-    font-size: 14px; /* Tamaño de letra */
-    text-transform: uppercase; /* Letras en mayúscula */
-    background: #6B3618; /* Color de fondo */
-    padding: 10px 15px; /* Relleno */
+.nav {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #6B3618;
+    padding: 10px 15px;
+    margin: 10px;
+    color: #FFD059;
+    border-bottom: solid 2px #FFD059;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+
+/* Estilos para la barra de progreso */
+.progress-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 4px; /* Ajusta el grosor de la barra de progreso según tus preferencias */
+    background-color: #4CAF50; /* Color de la barra de progreso */
+}
+
+
+
+
+#section03 {
+    width: 100%;
+    height: 49px;
+    display: flex;
+}
+
+#section08 {
+    width: 10%;
+}
+
+#section04 {
+    width: 50%;
+    height: 49px;
+    padding: 2px;
+    49px;
+    float: right;
+    margin: 5px;
+    text-align: center;
+}
+
+#section05 {
+    width: 50%;
+    height: 49px;
+    float: right;
+    margin: 10px;
+    text-align: center;
+}
+
+#section05 a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #6B3618;
+    padding: 10px 15px;
     margin: 1px;
-    color: #FFD059; /* Color de texto */
-    border-bottom: solid 2px #FFD059; /* Borde inferior */
-    border-radius: 10px; color: #ffffff;  }
+    color: #FFD059;
+    border-bottom: solid 2px #FFD059;
+    border-radius: 10px;
+    color: #ffffff;
+}
 
-  
-.main{   width:100%;  max-height: 220px;  display: flex; overflow-x: auto;}
-#section6 img{ border: 1px solid black; border-radius: 10px; height: 200px; width: 130px;  display: flex;}
-#section6{ margin: 5px; border-radius: 10px;  display: flex;}
-#section66 img{ border: 1px solid black; border-radius: 10px; height: 200px; width: 300px;  display: flex;}
-#section66{ margin: 5px; border-radius: 10px;  display: flex;}
-#section6 video{ border: 1px solid black; border-radius: 10px; height: 200px; width: 300px;  display: flex;}
+.main {
+    width: 100%;
+    max-height: 220px;
+    display: flex;
+    overflow-x: auto;
+}
 
-.footer{ width:90%; height: 100%; margin: 5px;  }
-p{padding: 10px; }
-  
-.version{ width:90%; height: 40px; }
-   
- 
+#section6 img {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 130px;
+    display: flex;
+}
 
-header1{display: flex; width:100%;}
+#section6 {
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+}
 
-.logo1{ padding: 15px; width:10px;}
-.log1 { height 30px; width:30px; }
-.log1 img{  height: 30px; width:30px;}
+#section66 img {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    display: flex;
+}
+
+#section66 {
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#section6 video {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    display: flex;
+}
+
+.footer {
+    width: 90%;
+    height: 100%;
+    margin: 5px;
+}
+
+p {
+    padding: 10px;
+}
+
+.version {
+    width: 90%;
+    height: 40px;
+}
+
+header1 {
+    display: flex;
+    width: 100%;
+}
+
+.logo1 {
+    padding: 15px;
+    width: 10px;
+}
+
+.log1 {
+    height 30px;
+    width: 30px;
+}
+
+.log1 img {
+    height: 30px;
+    width: 30px;
+}
+
+.nombre1 {
+    padding: 20px;
+    height 30px;
+    width: 100%;
+}
+
+.nombre1 p {
+    font-size: 12px;
+}
+
+header {
+    display: flex;
+    height 60px;
+    width: 100%;
+}
+
+.logo {
+    padding: 15px;
+    width: 70px;
+}
+
+.log {
+    height 60px;
+    width: 60px;
+    text-align: center;
+}
+
+.log img {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.nombre {
+    height 50px;
+    width: 100%;
+}
+
+.nombre p {
+    font-size: 12px;
+}
 
 
-.nombre1{ padding: 20px; height 30px; width:100%;}
-.nombre1 p{font-size: 12px; }
-  
-  header{ display: flex; height 60px; width:100%;}
-
-.logo{ padding: 15px; width:70px;}
-.log {height 60px; width:60px; text-align: center;}
-.log img{border:1px solid black; border-radius: 10px; height: 60px; width:60px;}
-
-.nombre{height 50px; width:100%;}
-.nombre p{font-size: 12px; }
-
-  
-</style>
+    </style>
 </head>
 <body>
-  
-  
-<div class="container">
-  
-<section id="section1"><img src="1.jpg" width="80"  height="80">
-</section>
 
-<section id="section2">
-<center><font size="4"><b>    Casma Flow Music  </b></font><br> 
-<font size="3" color="green"><b>  Radio emisora Musical y Tv Online  </b></font>
-<br> <font size="2">Verificado por <b>Virus Total</b></font></center>
-<font size="2"><b>Versión:  1.6(81)  <br>
-Tamaño:  20.72 MB</b></font>
-</section>
-  
+<div class="container">
+    <section id="section1">
+        <img src="1.jpg" width="80" height="80">
+    </section>
+    <section id="section2">
+        <center><font size="4"><b>Casma Flow Music</b></font><br> 
+        <font size="3" color="green"><b>Radio emisora Musical y Tv Online</b></font><br>
+        <font size="2">Verificado por <b>Virus Total</b></font></center>
+        <font size="2"><b>Versión: 1.6(81)<br>Tamaño: 20.72 MB</b></font>
+    </section>
 </div>
-  
-<div class="nav"> 
-<a href="CasmaFlowMusic-3_Android-life.apk"  download=" Casma Flow MusicAndroid-life " ><center>Descargar</center></a>
+
+<div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+<div class="nav">
+    <a id="download-button" href="CasmaFlowMusic-3_Android-life.apk" download="Casma Flow MusicAndroid-life">
+        <center>Descargar</center>
+    </a>
 </div>
-  
+
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0" nonce="nahrbfKH"></script>
   
 <section id="section03">
-<div id="section08">
-</div>
-<div id="section04"><div class="rw-ui-container"></div>
-</div>
-<div id="section05"><a href="#comentarios" ><center>Comentarios</center></a> 
-</div>
+    <div id="section08"></div>
+    <div id="section04"><div class="rw-ui-container"></div></div>
+    <div id="section05"><a href="#comentarios"><center>Comentarios</center></a></div>
 </section>
   
 <div class="main">
-<section id="section6">
-<img src="22.jpg" >
-</section>
-<section id="section6">
-<img src="33.jpg"  >
-</section>
-<section id="section6">
-<img src="44.jpg" >
-</section>
-<section id="section6">
-<img src="55.jpg" >
-</section>
-<section id="section6">
-<img src="66.jpg" >
-</section>
-<section id="section6">
-<img src="77.jpg" >
-</section>
+    <section id="section6">
+        <img src="22.jpg">
+    </section>
+    <section id="section6">
+        <img src="33.jpg">
+    </section>
+    <section id="section6">
+        <img src="44.jpg">
+    </section>
+    <section id="section6">
+        <img src="55.jpg">
+    </section>
+    <section id="section6">
+        <img src="66.jpg">
+    </section>
+    <section id="section6">
+        <img src="77.jpg">
+    </section>
 </div>
 
 <div class="footer">
-<p><pre>
-<h2>  Descripción:</h2></pre><br>
- Radio emisora Musical y Tv Online que se transmite las 24 horas en Vivo
-
-Somos una Radio emisora Musical y Tv Online que se transmite las 24 horas Totalmente en Vivo desde casma - Ancash Perú para todo el mundo con una programación al 100% ganadora tambien pueden escucharnos desde nuestra app y página web para mas info. contactanos ahora
-</p>
+    <p>
+        <h2>Descripción:</h2><br>
+        Radio emisora Musical y Tv Online que se transmite las 24 horas en Vivo<br><br>
+        Somos una Radio emisora Musical y Tv Online que se transmite las 24 horas Totalmente en Vivo desde casma - Ancash Perú para todo el mundo con una programación al 100% ganadora tambien pueden escucharnos desde nuestra app y página web para mas info. contactanos ahora
+    </p>
 </div>
   
-
-
 <div class="footer">
-<p><pre>
-<h4>  Datos del desarrollador</h4></pre>
+    <p>
+        <h4>Datos del desarrollador</h4><br>
+        Dj'Fer-CasmaPerú
+    </p>
 </div>
-
 
 <header1>
-<div class="logo1">
-<div class="log1">
-<img src=" desarrollador.png" >
-</div>
-</div>
-<div class="nombre1">
-Dj\'Fer-CasmaPerú
-</div>
+    <div class="logo1">
+        <div class="log1">
+            <img src="desarrollador.png">
+        </div>
+    </div>
+    <div class="nombre1">
+        Dj'Fer-CasmaPerú
+    </div>
 </header1>
 
 <header1>
-<div class="logo1">
-<div class="log1">
-<img src="email.png">
-</div>
-</div>
-<div class="nombre1">
-fernando34_10@outlook.com
-</div>
+    <div class="logo1">
+        <div class="log1">
+            <img src="email.png">
+        </div>
+    </div>
+    <div class="nombre1">
+        fernando34_10@outlook.com
+    </div>
 </header1>
 
+<header1>
+    <div class="logo1">
+        <div class="log1">
+            <a href="https://www.e-droid.net/privacy.php?ida=1577872&idl=es">
+                <img src="privacidad.png">
+            </a>
+        </div>
+    </div>
+    <div class="nombre1">
+        Politica de privacidad 
+    </div>
+</header1>
 
 <header1>
-<div class="logo1">
-<div class="log1">
-<a href="  https://www.e-droid.net/privacy.php?ida=1577872&idl=es "><img src="privacidad.png " ></a>
-</div>
-</div>
-<div class="nombre1">
-Politica de privacidad 
-</div>
-</header1>  
-
-
-<header1>
-<div class="logo1">
-<div class="log1">
-<a href="  https://www.instagram.com/casmaflowmusic/   "><img src="web.png" ></a>
-</div>
-</div>
-<div class="nombre1">
-Web
-</div>
-</header1> 
+    <div class="logo1">
+        <div class="log1">
+            <a href="https://www.instagram.com/casmaflowmusic/">
+                <img src="web.png">
+            </a>
+        </div>
+    </div>
+    <div class="nombre1">
+        Web
+    </div>
+</header1>
 
 <div class="version">
-<pre><h3>     Otras Versiones </h3>
-</pre>
-</div> 
+    <pre><h3>Otras Versiones</h3></pre>
+</div>
 
 <header>
-<div class="logo">
-<div class="log">
-<a href=" Casma Flow Music_Android-life.apk  " download="Casma Flow Music Android-life" ><img src="1.jpg" ></a>
-</div>
-</div>
-<div class="nombre">
-<pre><p>
-Casma Flow Music
-versión   1.5(54)
-tamaño   20.61 MB
-</p>
-</pre>
-</div>
-</header>  
-
+    <div class="logo">
+        <div class="log">
+            <a href="CasmaFlowMusic_Android-life.apk" download="Casma Flow Music Android-life">
+                <img src="1.jpg">
+            </a>
+        </div>
+    </div>
+    <div class="nombre">
+        <pre><p>
+        Casma Flow Music
+        versión   1.5(54)
+        tamaño   20.61 MB
+        </p></pre>
+    </div>
+</header>
 
 <div id="comentarios"></div>
 
-  
-  
-  
- <script type="text/javascript">(function(d, t, e, m){
+
+
+
+     <script type="text/javascript">(function(d, t, e, m){
     
     // Async Rating-Widget initialization.
     window.RW_Async_Init = function(){
@@ -280,6 +456,7 @@ tamaño   20.61 MB
     rw.id = id; rw.async = true; rw.type = "text/javascript";
     rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
     s.parentNode.insertBefore(rw, s);
-    }(document, new Date(), "script", "rating-widget.com/"));</script> 
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+
 </body>
 </html>
